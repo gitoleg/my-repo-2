@@ -1,4 +1,4 @@
-FROM gitoleg/my-repo-1:latest
+FROM gitoleg/my-repo-1:latest as base
 
 RUN echo "rebuilt!"
 
