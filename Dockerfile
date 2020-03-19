@@ -2,6 +2,8 @@ FROM gitoleg/my-repo-1:latest as base
 
 RUN echo "built!"
 
+
+FROM debian:stable-slim
 WORKDIR /home/me
 COPY --from=base /home/myfolder/1.file /home/me
 
