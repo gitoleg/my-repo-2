@@ -8,6 +8,7 @@ FROM gitoleg/my-repo-1:latest as base
 # COPY --from=base /home/myfolder/1.file /home/me
 
 RUN apt-get update && apt-get install git --yes \
+ && ssh -T git@github.com \
  && git clone git@github.com/gitoleg/my-repo-2.git  \
  && cd my-repo-2 \
  && sh -c "echo a > 11" \
