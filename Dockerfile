@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install git --yes \
  && git clone https://gitoleg@github.com/gitoleg/my-repo-2.git  \
  && cd my-repo-2 \
  && sh -c "echo a > 11" \
+ && git config --global user.email "noreply@github.com" \
+ && git config --global user.name  "Me" \
  && git add 11 \
  && git commit -m "message" \
  && git push origin master
