@@ -9,7 +9,7 @@ FROM gitoleg/my-repo-1:latest as base
 
 RUN apt-get update && apt-get install git --yes
 
-RUN ls -la /root \
+RUN ls -la /home \
  && git clone git@github.com:gitoleg/my-repo-2.git  \
  && cd my-repo-2 \
  && sh -c "echo a > 1.file" \
